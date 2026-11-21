@@ -1,10 +1,12 @@
 # Space Invaders
 
-Pygame shooter, checkpoint 1 version: the player ship moves and fires, enemy waves fall, enemies that reach the bottom cost a life.
+Pygame shooter built during the Hybridge course Programación Avanzada (Programación Aplicada). Checkpoint 1 version: the player ship moves and fires, enemies fall, and the HUD shows lives, level and loaded bullets.
+
+![Gameplay](screenshot.png)
 
 ```
 space-invaders/
-├── main.py           # game loop (window, waves, collisions, lives)
+├── main.py           # game loop
 ├── settings.py       # WIDTH, HEIGHT
 ├── assets.py         # image loading relative to this folder
 ├── GameClass.py      # Game: lives, level, HUD, game over, quit event
@@ -13,14 +15,15 @@ space-invaders/
 ├── EnemyClass.py     # Enemy(Ship): colors, move, create waves, speed
 ├── BulletClass.py    # Bullet: move, draw, mask collision
 ├── DrawingClass.py   # Drawing: background, ships, HUD per frame
-└── img/              # background, player, bullet, enemy and shot PNGs
+└── img/              # sprites provided by the course
 ```
 
 ## Run
 
 ```bash
-../../.venv/bin/python -m pip install -r ../../requirements.txt
-../../.venv/bin/python main.py
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python main.py
 ```
 
 Keys: arrows or `WASD` move, `SPACE` fire, close the window to quit.
